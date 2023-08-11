@@ -5,6 +5,7 @@ import com.zomato.MerchantService.domain.Shop;
 import com.zomato.MerchantService.exception.MerchantAlreadyExistsException;
 import com.zomato.MerchantService.exception.ShopAlreadyExistsException;
 import com.zomato.MerchantService.exception.ShopNotFoundException;
+import com.zomato.MerchantService.service.IMerchantService;
 import com.zomato.MerchantService.service.MerchantService;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/v1")
 public class MerchantController {
     @Autowired
-    private MerchantService merchantService;
+    private IMerchantService merchantService;
 
     private ResponseEntity<?> responseEntity;
 
